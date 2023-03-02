@@ -11,7 +11,7 @@ import java.util.UUID;
 public class WebController {
 
     private final String id = "Web Server Node " + UUID.randomUUID();
-    
+
     @GetMapping(path = "/whereami")
     public Mono<String> whereami() {
         return WebClient.create()
